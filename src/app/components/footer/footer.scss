@@ -1,0 +1,61 @@
+.main-footer {
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto; // Empuja el footer hacia abajo si el contenido es corto
+  font-size: 0.85rem;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-left {
+    p { margin: 0; color: #2c3e50; }
+    .app-version { font-size: 0.75rem; color: #95a5a6; }
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    a {
+      color: #7f8c8d;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover { color: #3498db; }
+    }
+  }
+
+  .footer-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #27ae60;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
+    }
+    p { margin: 0; font-weight: 500; color: #27ae60; font-size: 0.75rem; }
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
