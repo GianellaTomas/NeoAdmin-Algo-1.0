@@ -1,0 +1,13 @@
+<div class="login-container">
+  <h2>Acceso al Sistema</h2>
+  
+  <input type="email" [(ngModel)]="email" placeholder="Email">
+  <input type="password" [(ngModel)]="password" placeholder="Contraseña">
+  
+  <div class="actions">
+    <button (click)="iniciarSesion()">Entrar</button>
+    <button type="button" (click)="irARegistro()">Crear Usuario</button>
+  </div>
+
+  <p *ngIf="error" class="error">Credenciales incorrectas</p>
+</div>
