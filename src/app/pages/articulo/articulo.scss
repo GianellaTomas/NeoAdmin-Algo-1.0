@@ -1,0 +1,59 @@
+.articulo-container {
+  min-height: 100vh;
+  background-color: #f5f6fa;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.articulo-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 1rem 0 1.5rem 0;
+  }
+}
+
+.btn-volver {
+  background: none;
+  border: none;
+  color: #4299e1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    color: #3182ce;
+    text-decoration: underline;
+  }
+}
+
+.contenido {
+  background: #f7fafc;
+  border-left: 4px solid #4299e1;
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem;
+
+  p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0.3rem 0;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

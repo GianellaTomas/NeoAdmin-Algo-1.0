@@ -1,0 +1,18 @@
+<div class="articulo-container">
+  <div class="articulo-card">
+
+    <div *ngIf="articulo">
+      <button class="btn-volver" (click)="volver()">← Volver al panel</button>
+      <h2>{{ articulo.titulo }}</h2>
+      <div class="contenido">
+        <p *ngFor="let linea of articulo.contenido.split('\n')">{{ linea }}</p>
+      </div>
+    </div>
+
+    <div *ngIf="!articulo">
+      <p>Artículo no encontrado.</p>
+      <button class="btn-volver" (click)="volver()">← Volver al panel</button>
+    </div>
+
+  </div>
+</div>
