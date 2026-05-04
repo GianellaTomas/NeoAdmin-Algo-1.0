@@ -2,7 +2,7 @@
   <div class="navbar-container">
     <div class="navbar-brand">
       <span class="icon">🎫</span>
-      <h1 class="brand-name">TicketMaster <span class="badge">ITAM</span></h1>
+      <h1 class="brand-name">NeoAdmin <span class="badge">ITB</span></h1>
     </div>
 
     <div class="navbar-search">
@@ -11,7 +11,7 @@
     </div>
 
     <nav class="navbar-actions">
-      <button class="btn-new-ticket">+ Nuevo Ticket</button>
+      <button class="btn-new-ticket" (click)="irANuevoTicket()">+ Nuevo Ticket</button>
       
       <div class="user-profile">
         <div class="user-info">
@@ -21,9 +21,9 @@
         <img src="https://ui-avatars.com/api/?name=User+Trainee&background=random" alt="Avatar" class="avatar" />
       </div>
 
-      <button class="btn-logout" title="Cerrar Sesión">
-        <span class="icon">🚪</span>
-      </button>
+     <button class="btn-logout" title="Cerrar Sesión" (click)="cerrarSesion()">
+      <span class="icon">🚪</span>
+    </button>
     </nav>
   </div>
 </header>

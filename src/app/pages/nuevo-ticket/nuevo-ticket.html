@@ -1,0 +1,67 @@
+<div class="form-container">
+  <div class="form-card">
+
+    <!-- Éxito -->
+    <div *ngIf="enviado" class="mensaje-exito">
+      <h3>✅ Ticket creado exitosamente</h3>
+      <p>Tu ticket fue registrado. Pronto un agente lo revisará.</p>
+      <button (click)="volver()">Volver al panel</button>
+    </div>
+
+    <!-- Formulario -->
+    <div *ngIf="!enviado">
+      <h2>+ Nuevo Ticket</h2>
+      <p class="subtitulo">Completá el formulario para reportar tu problema</p>
+
+      <div class="campo">
+        <label>Tu email</label>
+        <input type="email"
+               [(ngModel)]="ticket.usuario_email"
+               placeholder="tu@email.com" />
+      </div>
+
+      <div class="campo">
+        <label>Título del problema</label>
+        <input type="text"
+               [(ngModel)]="ticket.titulo"
+               placeholder="Ej: Falla en impresora de red" />
+      </div>
+
+      <div class="campo">
+        <label>Descripción</label>
+        <textarea [(ngModel)]="ticket.descripcion"
+                  rows="4"
+                  placeholder="Describí el problema con el mayor detalle posible...">
+        </textarea>
+      </div>
+
+      <div class="campo">
+        <label>Activo IT afectado</label>
+        <input type="text"
+               [(ngModel)]="ticket.activo_it"
+               placeholder="Ej: PC-Sala3, Servidor-BD, Router-Piso2" />
+      </div>
+
+      <div class="campo">
+        <label>Prioridad</label>
+        <select [(ngModel)]="ticket.prioridad">
+          <option value="baja">🟢 Baja</option>
+          <option value="media">🟡 Media</option>
+          <option value="alta">🔴 Alta / Urgente</option>
+        </select>
+      </div>
+
+      <div *ngIf="error" class="mensaje-error">
+        ⚠️ {{ error }}
+      </div>
+
+      <div class="botones">
+        <button class="btn-cancelar" (click)="volver()">Cancelar</button>
+        <button class="btn-enviar" (click)="enviarTicket()" [disabled]="cargando">
+          {{ cargando ? 'Enviando...' : 'Crear Ticket' }}
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

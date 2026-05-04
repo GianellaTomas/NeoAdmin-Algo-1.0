@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterModule],
+  imports: [],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+
+  constructor(private router: Router) {}
+
+  irANuevoTicket(): void {
+    this.router.navigate(['/nuevo-ticket']);
+  }
+
+   cerrarSesion(): void {
+    this.router.navigate(['/']);
+  }
+
+}

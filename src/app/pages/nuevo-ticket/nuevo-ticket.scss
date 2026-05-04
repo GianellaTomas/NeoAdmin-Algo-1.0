@@ -1,0 +1,142 @@
+.form-container {
+  min-height: 100vh;
+  background-color: #f5f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitulo {
+    color: #718096;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.4rem;
+  }
+
+  input, textarea, select {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.95rem;
+    color: #2d3748;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: #4299e1;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  .btn-cancelar {
+    flex: 1;
+    padding: 0.7rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    color: #4a5568;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: #f7fafc;
+    }
+  }
+
+  .btn-enviar {
+    flex: 2;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background: #48bb78;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: #38a169;
+    }
+
+    &:disabled {
+      background: #a0aec0;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.mensaje-exito {
+  text-align: center;
+  padding: 2rem;
+
+  h3 {
+    font-size: 1.3rem;
+    color: #38a169;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #718096;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    padding: 0.7rem 2rem;
+    background: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: #3182ce;
+    }
+  }
+}
+
+.mensaje-error {
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
